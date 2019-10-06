@@ -33,7 +33,7 @@ exports.getAllMoviesByGenre = function (req, res) {
     console.log("[Genre Controller][getAllMoviesByGenre][START]");
     const id = parseInt(req.params.id);
   
-    db.from('tbl_movies').select('id', 'title', 'genre_id').where('genre_id', '=', id)
+    db.from('tbl_movies').select('id', 'title', 'year', 'poster', 'plot', 'genre_id').where('genre_id', '=', id)
         .then(items => {
             if(items.length){
                 res.json(items)
