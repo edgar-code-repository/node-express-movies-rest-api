@@ -11,10 +11,14 @@ MOVIES REST API WITH NODE AND EXPRESS
 
 Pantalla que muestra retorno de endpoint genres:
 
-![Screenshot Genres](screenshots/postman_genres_get.png)
+![Screenshot Genres](screenshots/postman-node-rest-genres.png)
 
 Pantalla que muestra retorno de endpoint movies by genre:
 
-![Screenshot MoviesByGenre](screenshots/postman_movies_by_genre_get.png)
+![Screenshot MoviesByGenre](screenshots/postman-node-movies-by-genre.png)
+
+Pantalla que muestra endpoint que permite agregar movies by genre:
+
+![Screenshot PostMovie](screenshots/postman-node-post-movie.png)
 
 --------------------------------------------------------------------------------------------------------------------
