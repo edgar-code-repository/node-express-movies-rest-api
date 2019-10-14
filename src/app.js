@@ -17,4 +17,11 @@ app.get('/', (req, res) => {
 
 app.use('/api/genres', genre_routes);
 
+app.get((req, res) => {
+    res.status(404).json({
+        message: "URL Not Found!"
+    })    
+});
+
+
 module.exports = app
