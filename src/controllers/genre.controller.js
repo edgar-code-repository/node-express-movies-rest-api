@@ -65,9 +65,10 @@ exports.createMovieByGenre = function (req, res) {
     console.log("[Genre Controller][createMovieByGenre][plot: " + plot + "]");
     console.log("[Genre Controller][createMovieByGenre][genre_id: " + genre_id + "]");
 
-    db('tbl_movies').insert(new_movie).
-      then(() => {
-        console.log("[Genre Controller][createMovieByGenre][Movie Created Successfully]");
+    db('tbl_movies').insert(new_movie).returning('id').
+      then((id) => {
+        console.log("[Genre Controller][createMovieByGenre][Movie Created Successfully withd id: " + id[0] + "]");
+        new_movie['id'] = id[0];
         res.send(new_movie)
       })
       .catch(error => { 

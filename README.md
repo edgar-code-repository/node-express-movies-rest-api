@@ -19,6 +19,6 @@ Pantalla que muestra retorno de endpoint movies by genre:
 
 Pantalla que muestra endpoint que permite agregar movies by genre:
 
-![Screenshot PostMovie](screenshots/postman-node-post-movie.png)
+![Screenshot PostMovie](screenshots/postman-node-movies-post.png)
 
 --------------------------------------------------------------------------------------------------------------------
