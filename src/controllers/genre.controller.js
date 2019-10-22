@@ -33,19 +33,34 @@ exports.getAllMoviesByGenre = function (req, res) {
     console.log("[Genre Controller][getAllMoviesByGenre][START]");
     const id = parseInt(req.params.id);
     let page = parseInt(req.query.page);
+    let totalPages = 0;
+    const itemsPerPage = 10;
 
     if (!page) {
         page = 1;
     }
     console.log("[Genre Controller][getAllMoviesByGenre][page: " + page + "]");
   
-    db.from('tbl_movies').select('id', 'title', 'year', 'poster', 'plot', 'genre_id').where('genre_id', '=', id)
+    db.from('tbl_movies')
+        .select('id', 'title', 'year', 'poster', 'plot', 'genre_id')
+        .where('genre_id', '=', id)
+        .orderBy('year')
         .then(items => {
-            items = items.slice(page * 10 - 10, page * 10)
-            if(items.length){
-                res.json(items)
+            if(items.length) {
+                totalPages = Math.floor(items.length / itemsPerPage);
+                if (items.length % itemsPerPage) {
+                    totalPages++;
+                }
+                items = items.slice(page * itemsPerPage - itemsPerPage, page * 10);
+                res.json({
+                    dataExists: true,
+                    page: page,
+                    itemsPerPage: itemsPerPage,
+                    totalPages: totalPages,
+                    items: items
+                });
             } else {
-                res.json({dataExists: 'false'})
+                res.json({dataExists: 'false'});
             }
         })
         .catch(error => {
@@ -68,7 +83,10 @@ exports.getMovieById = function (req, res) {
         })
         .then(items => {    
             if(items.length){
-                res.json(items)
+                res.json({
+                    dataExists: 'true',
+                    items: items
+                })
             } else {
                 res.json({dataExists: 'false'})
             }

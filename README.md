@@ -13,9 +13,9 @@ Pantalla que muestra retorno de endpoint genres:
 
 ![Screenshot Genres](screenshots/postman-node-rest-genres.png)
 
-Pantalla que muestra retorno de endpoint movies by genre:
+Pantalla que muestra retorno de endpoint movies by genre con paginación y ordenamiento:
 
-![Screenshot MoviesByGenre](screenshots/postman-node-movies-by-genre.png)
+![Screenshot MoviesByGenre](screenshots/postman-node-movies-pagination.png)
 
 Pantalla que muestra endpoint que permite agregar movies by genre:
 
