@@ -32,9 +32,16 @@ exports.getAllGenres = function (req, res) {
 exports.getAllMoviesByGenre = function (req, res) {
     console.log("[Genre Controller][getAllMoviesByGenre][START]");
     const id = parseInt(req.params.id);
+    let page = parseInt(req.query.page);
+
+    if (!page) {
+        page = 1;
+    }
+    console.log("[Genre Controller][getAllMoviesByGenre][page: " + page + "]");
   
     db.from('tbl_movies').select('id', 'title', 'year', 'poster', 'plot', 'genre_id').where('genre_id', '=', id)
-        .then(items => {    
+        .then(items => {
+            items = items.slice(page * 10 - 10, page * 10)
             if(items.length){
                 res.json(items)
             } else {
@@ -53,7 +60,6 @@ exports.getMovieById = function (req, res) {
     const id = parseInt(req.params.id);
     const movie_id = parseInt(req.params.movie_id);
   
-    //db.from('tbl_movies').select('id', 'title', 'year', 'poster', 'plot', 'genre_id').where('genre_id', '=', id)
     db('tbl_movies')
         .select('id', 'title', 'year', 'poster', 'plot', 'genre_id')
         .where({
