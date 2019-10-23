@@ -17,6 +17,10 @@ Pantalla que muestra retorno de endpoint movies by genre con paginación y orden
 
 ![Screenshot MoviesByGenre](screenshots/postman-node-movies-pagination.png)
 
+Pantalla que muestra endpoint que permite recuperar movie by id:
+
+![Screenshot MovieById](screenshots/postman-node-movie-by-id.png)
+
 Pantalla que muestra endpoint que permite agregar movies by genre:
 
 ![Screenshot PostMovie](screenshots/postman-node-movies-post.png)

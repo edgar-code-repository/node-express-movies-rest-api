@@ -70,34 +70,6 @@ exports.getAllMoviesByGenre = function (req, res) {
   
 };
 
-exports.getMovieById = function (req, res) {
-    console.log("[Genre Controller][getMovieById][START]");
-    const id = parseInt(req.params.id);
-    const movie_id = parseInt(req.params.movie_id);
-  
-    db('tbl_movies')
-        .select('id', 'title', 'year', 'poster', 'plot', 'genre_id')
-        .where({
-            id: movie_id,
-            genre_id: id
-        })
-        .then(items => {    
-            if(items.length){
-                res.json({
-                    dataExists: 'true',
-                    items: items
-                })
-            } else {
-                res.json({dataExists: 'false'})
-            }
-        })
-        .catch(error => {
-            console.log("[Genre Controller][getMovieById][Error: " + error + "]");
-            res.status(500).json({message: error})
-        })    
-  
-};
-
 exports.createMovieByGenre = function (req, res) {
     console.log("[Genre Controller][createMovieByGenre][START]");
     const { title, year, poster, plot, genre_id } = req.body
