@@ -1,13 +1,13 @@
 MOVIES REST API WITH NODE AND EXPRESS
 --------------------------------------------------------------------------------------------------------------------
 
-**API Rest desarrollada con Node y Express.**
+API Rest desarrollada con Node y Express.
 
-**Se utilizan librerias node-postgres y knex para conectarse y almacenar datos en un servidor PostgreSQL**
+Se utilizan librerias node-postgres y knex para conectarse y almacenar datos en un servidor PostgreSQL.
 
 --------------------------------------------------------------------------------------------------------------------
 
-Esta aplicación contiene servicios Rest que permiten manipular información de películas que son utilizados
+Esta aplicación contiene servicios Rest que permiten manipular información de películas y que son utilizados
 por la aplicación "IONIC MOVIES APP", desarrollada con Ionic 4.
 
 **IONIC MOVIES APP**
