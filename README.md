@@ -5,6 +5,25 @@ API Rest desarrollada con Node y Express.
 
 Se utilizan librerias node-postgres y knex para conectarse y almacenar datos en un servidor PostgreSQL.
 
+También se utilizan las librerías cors, dotenv y nodemon.
+
+Dependencias en archivo package.json:
+
+```
+
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "knex": "^0.19.5",
+    "pg": "^7.12.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.2"
+  }
+
+```
+
 --------------------------------------------------------------------------------------------------------------------
 
 Esta aplicación contiene servicios Rest que permiten manipular información de películas y que son utilizados
