@@ -1,13 +1,15 @@
-MOVIES REST API WITH NODE AND EXPRESS
---------------------------------------------------------------------------------------------------------------------
+MOVIES REST API
+------------------------------------------------------------------------------------------------------------
 
-API Rest desarrollada con Node y Express.
+Rest API developed with Node and Express.
 
-Se utilizan librerias node-postgres y knex para conectarse y almacenar datos en un servidor PostgreSQL.
+Libraries node-postgres and knex are used to connect and store data in a PostgreSQL database.
 
-También se utilizan las librerías cors, dotenv y nodemon.
+This app contains endpoints that allows to store data about movies and genres.
 
-Dependencias en archivo package.json:
+------------------------------------------------------------------------------------------------------------
+
+Dependencies used by the app:
 
 ```
 
@@ -24,33 +26,28 @@ Dependencias en archivo package.json:
 
 ```
 
---------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------
 
-Esta aplicación contiene servicios Rest que permiten manipular información de películas y que son utilizados
-por la aplicación "IONIC MOVIES APP", desarrollada con Ionic 4.
-
-**IONIC MOVIES APP**
-
-https://github.com/edgar-code-repository/ionic-movies-app
-
---------------------------------------------------------------------------------------------------------------------
-
-**Ejecución de API con Postman**
-
-**Pantalla que muestra retorno de endpoint genres:**
+**Call to retrieve genres from Postman:**
 
 ![Screenshot Genres](screenshots/postman-node-rest-genres.png)
 
-**Pantalla que muestra retorno de endpoint movies by genre con paginación y ordenamiento:**
+------------------------------------------------------------------------------------------------------------
+
+**Get call to retrive movies by genre from Postman:**
 
 ![Screenshot MoviesByGenre](screenshots/postman-node-movies-pagination.png)
 
-**Pantalla que muestra endpoint que permite recuperar movie by id:**
+------------------------------------------------------------------------------------------------------------
+
+**Get call to retrieve a movie by id from Postman:**
 
 ![Screenshot MovieById](screenshots/postman-node-movie-by-id.png)
 
-**Pantalla que muestra endpoint que permite agregar movies by genre:**
+------------------------------------------------------------------------------------------------------------
+
+**Post call to store a movie from Postman:**
 
 ![Screenshot PostMovie](screenshots/postman-node-movies-post.png)
 
---------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------
